@@ -12,9 +12,17 @@ namespace livrariafds
 {
     public partial class Form1 : Form
     {
+        // Criando uma variavel que representa o acesso desse formulario as outras telas
+        CadastroUsuario cdUsuario = null;
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Entrar(object sender, EventArgs e)
+        {
+
         }
     }
 }
