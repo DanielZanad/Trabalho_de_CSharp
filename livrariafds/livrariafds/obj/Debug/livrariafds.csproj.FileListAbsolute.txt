@@ -1,0 +1,11 @@
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\bin\Debug\livrariafds.exe.config
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\bin\Debug\livrariafds.exe
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\bin\Debug\livrariafds.pdb
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.csproj.AssemblyReference.cache
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.CadastroUsuario.resources
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.Form1.resources
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.Properties.Resources.resources
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.csproj.GenerateResource.cache
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.csproj.CoreCompileInputs.cache
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.exe
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.pdb
