@@ -113,7 +113,7 @@
     <Compile Include="ListarUsuarios.Designer.cs">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs" />
+    <Compile Include="ModelUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaLivros.cs">

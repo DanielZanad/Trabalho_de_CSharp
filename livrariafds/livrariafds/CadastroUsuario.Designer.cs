@@ -50,7 +50,7 @@ namespace livrariafds
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 50);
+            this.label1.Location = new System.Drawing.Point(65, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace livrariafds
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 92);
+            this.label2.Location = new System.Drawing.Point(65, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace livrariafds
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 139);
+            this.label3.Location = new System.Drawing.Point(65, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 20);
             this.label3.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace livrariafds
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 190);
+            this.label4.Location = new System.Drawing.Point(65, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace livrariafds
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 240);
+            this.label5.Location = new System.Drawing.Point(65, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 20);
             this.label5.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace livrariafds
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(215, 92);
+            this.txtEmail.Location = new System.Drawing.Point(247, 91);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 26);
             this.txtEmail.TabIndex = 5;
@@ -107,7 +107,7 @@ namespace livrariafds
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(215, 50);
+            this.txtNome.Location = new System.Drawing.Point(247, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(300, 26);
             this.txtNome.TabIndex = 7;
@@ -115,7 +115,7 @@ namespace livrariafds
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(215, 190);
+            this.txtSenha.Location = new System.Drawing.Point(247, 189);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(300, 26);
             this.txtSenha.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace livrariafds
             // txtConfirmarSenha
             // 
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(215, 234);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(247, 233);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.Size = new System.Drawing.Size(300, 26);
             this.txtConfirmarSenha.TabIndex = 9;
@@ -131,7 +131,7 @@ namespace livrariafds
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(37, 321);
+            this.button1.Location = new System.Drawing.Point(69, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 39);
             this.button1.TabIndex = 10;
@@ -142,7 +142,7 @@ namespace livrariafds
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(567, 322);
+            this.button2.Location = new System.Drawing.Point(585, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 39);
             this.button2.TabIndex = 11;
@@ -152,7 +152,7 @@ namespace livrariafds
             // dtpData
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpData.Location = new System.Drawing.Point(215, 138);
+            this.dtpData.Location = new System.Drawing.Point(247, 137);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(300, 26);
             this.dtpData.TabIndex = 12;
@@ -160,9 +160,9 @@ namespace livrariafds
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(624, 50);
+            this.button3.Location = new System.Drawing.Point(645, 45);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 39);
+            this.button3.Size = new System.Drawing.Size(123, 30);
             this.button3.TabIndex = 13;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@ namespace livrariafds
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(308, 322);
+            this.button4.Location = new System.Drawing.Point(334, 320);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 40);
             this.button4.TabIndex = 14;
@@ -183,7 +183,7 @@ namespace livrariafds
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(680, 9);
+            this.lblNome.Location = new System.Drawing.Point(641, 9);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(51, 20);
             this.lblNome.TabIndex = 15;

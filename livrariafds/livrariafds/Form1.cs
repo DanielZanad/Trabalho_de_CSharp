@@ -24,7 +24,7 @@ namespace livrariafds
         private void Entrar(object sender, EventArgs e)
         {
             IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
-            Model model = new Model();
+            ModelUsuario model = new ModelUsuario();
             Usuario usr = new Usuario();
             usr.setEmail(txtLogin.Text);
             usr.setSenha(txtSenha.Text);

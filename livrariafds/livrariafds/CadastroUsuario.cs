@@ -41,7 +41,7 @@ namespace livrariafds
                 // Criando "hash table" que vai armazenar o resultado do model
                 IDictionary<string, string> resultado = new Dictionary<string, string>();
                 // Instanciando o objeto model
-                Model model = new Model();
+                ModelUsuario model = new ModelUsuario();
                 // Instanciando o objeto usuario
                 Usuario usr = new Usuario();
 
@@ -95,6 +95,7 @@ namespace livrariafds
             lUsuarios = new ListarUsuarios();
             lUsuarios.setCLivro(this);
             lUsuarios.Show();
+            this.Hide();
         }
     }
 }
