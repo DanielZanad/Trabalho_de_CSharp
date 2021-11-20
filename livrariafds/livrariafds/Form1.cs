@@ -31,6 +31,8 @@ namespace livrariafds
 
 
             resultado = model.Login(usr);
+
+            // Colocar o redirecionamento se o usuario nao for admin
             if (resultado["status"] == 200)
             {
                 cdUsuario = new CadastroUsuario();
