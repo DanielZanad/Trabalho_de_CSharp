@@ -41,6 +41,8 @@ namespace livrariafds
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnListarProdutos = new System.Windows.Forms.Button();
+            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNome
@@ -60,8 +62,9 @@ namespace livrariafds
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(123, 30);
             this.btnLogout.TabIndex = 16;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Voltar";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.Voltar);
             // 
             // label1
             // 
@@ -138,28 +141,50 @@ namespace livrariafds
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(60, 287);
+            this.btnCadastrar.Location = new System.Drawing.Point(78, 323);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(165, 40);
             this.btnCadastrar.TabIndex = 26;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.Cadastrar);
             // 
             // btnListarProdutos
             // 
             this.btnListarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProdutos.Location = new System.Drawing.Point(302, 287);
+            this.btnListarProdutos.Location = new System.Drawing.Point(320, 323);
             this.btnListarProdutos.Name = "btnListarProdutos";
             this.btnListarProdutos.Size = new System.Drawing.Size(165, 40);
             this.btnListarProdutos.TabIndex = 27;
             this.btnListarProdutos.Text = "Listar Produtos";
             this.btnListarProdutos.UseVisualStyleBackColor = true;
+            this.btnListarProdutos.Click += new System.EventHandler(this.ListarProdutos);
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Location = new System.Drawing.Point(144, 274);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(252, 26);
+            this.txtAutor.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(71, 277);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 20);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Autor:";
             // 
             // CadastroLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtAutor);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnListarProdutos);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtEditora);
@@ -194,5 +219,7 @@ namespace livrariafds
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnListarProdutos;
+        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.Label label5;
     }
 }

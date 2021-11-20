@@ -107,13 +107,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarLivros.Designer.cs">
+      <DependentUpon>ListarLivros.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListarUsuarios.Designer.cs">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelProdutos.cs" />
     <Compile Include="ModelUsuario.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaLivros.cs">
@@ -123,11 +131,17 @@
       <DependentUpon>TelaLivros.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="CadastroLivro.resx">
+      <DependentUpon>CadastroLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroUsuario.resx">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarLivros.resx">
+      <DependentUpon>ListarLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>

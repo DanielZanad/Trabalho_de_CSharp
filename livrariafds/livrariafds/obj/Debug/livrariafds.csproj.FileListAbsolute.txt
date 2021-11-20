@@ -34,3 +34,5 @@ D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\bi
 D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.csproj.CopyComplete
 D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.TelaLivros.resources
 D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.ListarUsuarios.resources
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.CadastroLivro.resources
+D:\Projetos\C#Manha\trabalhoCsharp\Trabalho_de_CSharp\livrariafds\livrariafds\obj\Debug\livrariafds.ListarLivros.resources

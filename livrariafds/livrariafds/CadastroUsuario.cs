@@ -97,5 +97,13 @@ namespace livrariafds
             lUsuarios.Show();
             this.Hide();
         }
+
+        private void CadastrarLivro(object sender, EventArgs e)
+        {
+            cLivro = new CadastroLivro();
+            cLivro.setCdUsuario(this);
+            cLivro.setUsuario(usr);
+            cLivro.Show();
+        }
     }
 }

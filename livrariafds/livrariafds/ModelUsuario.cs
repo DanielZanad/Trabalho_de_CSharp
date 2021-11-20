@@ -132,7 +132,7 @@ namespace livrariafds
         }
         public void FecharConexao()
         {
-            conexao.Clone();
+            conexao.Close();
         }
 
         public IDictionary<string, dynamic> Excluir(int id)
