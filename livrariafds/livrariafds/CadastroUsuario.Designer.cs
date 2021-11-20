@@ -42,6 +42,8 @@ namespace livrariafds
             this.button2 = new System.Windows.Forms.Button();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.lblNome = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -140,7 +142,7 @@ namespace livrariafds
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(257, 321);
+            this.button2.Location = new System.Drawing.Point(567, 322);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 39);
             this.button2.TabIndex = 11;
@@ -158,18 +160,41 @@ namespace livrariafds
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(461, 321);
+            this.button3.Location = new System.Drawing.Point(624, 50);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 39);
             this.button3.TabIndex = 13;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Sair);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(308, 322);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 40);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Listar Usuarios";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(680, 9);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.TabIndex = 15;
+            this.lblNome.Text = "label6";
             // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.button2);
@@ -184,7 +209,9 @@ namespace livrariafds
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadastroUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroUsuario";
+            this.Load += new System.EventHandler(this.CadastroUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +232,7 @@ namespace livrariafds
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblNome;
     }
 }

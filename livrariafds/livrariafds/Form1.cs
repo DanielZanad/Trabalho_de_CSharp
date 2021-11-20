@@ -14,6 +14,7 @@ namespace livrariafds
     {
         // Criando uma variavel que representa o acesso desse formulario as outras telas
         CadastroUsuario cdUsuario = null;
+        TelaLivros tlivro = null;
 
         public Form1()
         {
@@ -22,7 +23,30 @@ namespace livrariafds
 
         private void Entrar(object sender, EventArgs e)
         {
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+            Model model = new Model();
+            Usuario usr = new Usuario();
+            usr.setEmail(txtLogin.Text);
+            usr.setSenha(txtSenha.Text);
 
+
+            resultado = model.Login(usr);
+            if (resultado["status"] == 200)
+            {
+                cdUsuario = new CadastroUsuario();
+                cdUsuario.setFr1(this);
+                cdUsuario.setUsuario(resultado["usuario"]);
+                cdUsuario.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario ou Senha incorreta");
+            }
+
+
+
+            
         }
     }
 }

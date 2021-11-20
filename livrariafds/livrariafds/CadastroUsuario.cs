@@ -12,27 +12,51 @@ namespace livrariafds
 {
     public partial class CadastroUsuario : Form
     {
+        // Criando uma variavel que representa o acesso desse formulario as outras telas
+        Form1 fr1 = null;
+        CadastroLivro cLivro = null;
+        ListarUsuarios lUsuarios = null;
+
+        Usuario usr = new Usuario();
+
         public CadastroUsuario()
         {
             InitializeComponent();
+        }
+
+        public void setFr1(Form1 fr1)
+        {
+            this.fr1 = fr1;
+        }
+        public void setUsuario(Usuario usr)
+        {
+            this.usr = usr;
         }
 
         private void CadastrarUsuario(object sender, EventArgs e)
         {
             if (txtSenha.Text.Equals(txtConfirmarSenha.Text))
             {
+                // Criando "hash table" que vai armazenar o resultado do model
                 IDictionary<string, string> resultado = new Dictionary<string, string>();
+                // Instanciando o objeto model
                 Model model = new Model();
+                // Instanciando o objeto usuario
                 Usuario usr = new Usuario();
+
+                // Inserindo dados que vem do formulario e atribuindo ao objeto
                 string dia  = Convert.ToString(dtpData.Value.Day);
                 string mes = Convert.ToString(dtpData.Value.Month);
                 string ano = Convert.ToString(dtpData.Value.Year);
                 usr.setNome(txtNome.Text);
                 usr.setEmail(txtEmail.Text);
                 usr.setDataNasc($"{ano}-{mes}-{dia}");
-
                 usr.setSenha(txtSenha.Text);
+                
+                // Chamando a funcao que vai salvar os dados no banco de dados
                 resultado = model.Salvar(usr);
+
+                // Verificando se deu tudo certo
                 if(resultado["status"] == "200")
                 {
                     MessageBox.Show("Cadastrado com sucesso");
@@ -51,6 +75,17 @@ namespace livrariafds
             
 
 
+        }
+
+        private void Sair(object sender, EventArgs e)
+        {
+            fr1.Show();
+            this.Close();
+        }
+
+        private void CadastroUsuario_Load(object sender, EventArgs e)
+        {
+            lblNome.Text = usr.getNome();
         }
     }
 }

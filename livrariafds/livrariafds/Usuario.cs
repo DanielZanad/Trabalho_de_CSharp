@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace livrariafds
 {
-    class Usuario
+    public class Usuario
     {
         private int id;
         private string nome;

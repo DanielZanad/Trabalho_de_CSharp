@@ -16,7 +16,7 @@ namespace livrariafds
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroUsuario());
+            Application.Run(new Form1());
         }
     }
 }
