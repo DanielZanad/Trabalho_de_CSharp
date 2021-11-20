@@ -74,6 +74,7 @@ namespace livrariafds
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(178, 26);
             this.txtSenha.TabIndex = 3;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtLogin
             // 

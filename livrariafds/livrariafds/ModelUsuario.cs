@@ -149,7 +149,7 @@ namespace livrariafds
 
                 // Executando comando
                 int retorno = comando.ExecuteNonQuery();
-                if (retorno >= 0)
+                if (retorno > 0)
                 {
                     resultado["status"] = 200;
                     resultado["msg"] = "Usuário excluído com sucesso";

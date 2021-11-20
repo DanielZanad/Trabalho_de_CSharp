@@ -82,5 +82,24 @@ namespace livrariafds
         {
             Atualizar();
         }
+
+        private void ExcluirProduto(object sender, EventArgs e)
+        {
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+            int codigo = Convert.ToInt32(txtCodigo.Text);
+
+            ModelProdutos model = new ModelProdutos();
+            resultado = model.Excluir(codigo);
+            if (resultado["status"] == 200)
+            {
+                MessageBox.Show(resultado["msg"]);
+                Atualizar();
+            }
+            else
+            {
+                MessageBox.Show(resultado["msg"]);
+            }
+
+        }
     }
 }

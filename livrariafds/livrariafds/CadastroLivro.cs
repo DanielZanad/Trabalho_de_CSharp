@@ -42,24 +42,32 @@ namespace livrariafds
             IDictionary<string, string> resultado = new Dictionary<string, string>();
 
             Produto prt = new Produto();
-            prt.setCodigo(Convert.ToInt32(txtCodigo.Text));
-            prt.setNome(Convert.ToString(txtNome.Text));
-            prt.setGenero(Convert.ToString(txtGenero.Text));
-            prt.setEditora(Convert.ToString(txtEditora.Text));
-            prt.setAutor(Convert.ToString(txtAutor.Text));
-
-            ModelProdutos model = new ModelProdutos();
-
-            resultado = model.Salvar(prt);
-
-            if (resultado["status"] == "200")
+            if (txtCodigo.Text.Equals(""))
             {
-                MessageBox.Show("Cadastrado com sucesso");
+                MessageBox.Show("Algum Campo esta vazio");
             }
             else
             {
-                MessageBox.Show(resultado["msg"]);
+                prt.setCodigo(Convert.ToInt32(txtCodigo.Text));
+                prt.setNome(Convert.ToString(txtNome.Text));
+                prt.setGenero(Convert.ToString(txtGenero.Text));
+                prt.setEditora(Convert.ToString(txtEditora.Text));
+                prt.setAutor(Convert.ToString(txtAutor.Text));
+
+                ModelProdutos model = new ModelProdutos();
+
+                resultado = model.Salvar(prt);
+
+                if (resultado["status"] == "200")
+                {
+                    MessageBox.Show("Cadastrado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show(resultado["msg"]);
+                }
             }
+            
         }
 
         private void Voltar(object sender, EventArgs e)

@@ -119,6 +119,7 @@ namespace livrariafds
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(300, 26);
             this.txtSenha.TabIndex = 8;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtConfirmarSenha
             // 
@@ -127,6 +128,7 @@ namespace livrariafds
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.Size = new System.Drawing.Size(300, 26);
             this.txtConfirmarSenha.TabIndex = 9;
+            this.txtConfirmarSenha.UseSystemPasswordChar = true;
             // 
             // button1
             // 

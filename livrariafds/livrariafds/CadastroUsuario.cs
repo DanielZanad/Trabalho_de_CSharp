@@ -104,6 +104,7 @@ namespace livrariafds
             cLivro.setCdUsuario(this);
             cLivro.setUsuario(usr);
             cLivro.Show();
+            this.Hide();
         }
     }
 }

@@ -49,7 +49,7 @@ namespace livrariafds
 
             MySqlDataReader lista = resultado["resultado"];
 
-            if (lista.Read())
+            if (resultado["status"] == 200)
             {
                 while (lista.Read())
                 {

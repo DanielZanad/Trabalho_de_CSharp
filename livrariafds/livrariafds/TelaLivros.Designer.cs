@@ -338,6 +338,7 @@ namespace livrariafds
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnLogout);
             this.Name = "TelaLivros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaLivros";
             this.Load += new System.EventHandler(this.TelaLivros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

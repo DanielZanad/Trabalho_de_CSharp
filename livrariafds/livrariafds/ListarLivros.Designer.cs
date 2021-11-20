@@ -75,6 +75,7 @@ namespace livrariafds
             this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.ExcluirProduto);
             // 
             // dgvProdutos
             // 
@@ -95,6 +96,7 @@ namespace livrariafds
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVoltar);
             this.Name = "ListarLivros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListarLivros";
             this.Load += new System.EventHandler(this.ListarLivros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();

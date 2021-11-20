@@ -81,6 +81,49 @@ namespace livrariafds
             }
 
         }
+
+
+        public IDictionary<string, dynamic> Excluir(int codigo)
+        {
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+
+            // Criando query
+            string sql = $"DELETE FROM produto WHERE codigo = {codigo}";
+            MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+            try
+            {
+                // Abrindo conexao
+                conexao.Open();
+                if (comando.ExecuteNonQuery() > 0)
+                {
+                    resultado["status"] = 200;
+                    resultado["msg"] = "Produto excluído com sucesso";
+                    return resultado;
+                }
+                else
+                {
+                    resultado["status"] = 400;
+                    resultado["msg"] = "produto não existe no banco de dados";
+                    return resultado;
+                }
+
+
+            }catch(Exception ex)
+            {
+                resultado["status"] = 400;
+                resultado["msg"] = Convert.ToString(ex);
+                return resultado;
+            }
+            finally
+            {
+                conexao.Close();
+                comando.Dispose();
+            }
+
+        }
+
+
         public void FecharConexao()
         {
             conexao.Close();

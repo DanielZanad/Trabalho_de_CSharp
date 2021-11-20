@@ -198,6 +198,7 @@ namespace livrariafds
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnLogout);
             this.Name = "CadastroLivro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroLivro";
             this.Load += new System.EventHandler(this.CadastroLivro_Load);
             this.ResumeLayout(false);
