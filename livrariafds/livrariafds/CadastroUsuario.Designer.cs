@@ -177,6 +177,7 @@ namespace livrariafds
             this.button4.TabIndex = 14;
             this.button4.Text = "Listar Usuarios";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.ListarUsuarios);
             // 
             // lblNome
             // 

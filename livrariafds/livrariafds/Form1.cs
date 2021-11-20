@@ -35,11 +35,24 @@ namespace livrariafds
             // Colocar o redirecionamento se o usuario nao for admin
             if (resultado["status"] == 200)
             {
-                cdUsuario = new CadastroUsuario();
-                cdUsuario.setFr1(this);
-                cdUsuario.setUsuario(resultado["usuario"]);
-                cdUsuario.Show();
-                this.Hide();
+
+                if (resultado["usuario"].getNome().Equals("admin"))
+                {
+                    cdUsuario = new CadastroUsuario();
+                    cdUsuario.setFr1(this);
+                    cdUsuario.setUsuario(resultado["usuario"]);
+                    cdUsuario.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    tlivro = new TelaLivros();
+                    tlivro.setFr1(this);
+                    tlivro.setUsr(resultado["usuario"]);
+                    tlivro.Show();
+                    this.Hide();
+                }
+                
             }
             else
             {

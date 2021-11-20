@@ -17,6 +17,7 @@ namespace livrariafds
         CadastroLivro cLivro = null;
         ListarUsuarios lUsuarios = null;
 
+        // Criando usuario para que fique armazenado os dados do usuario
         Usuario usr = new Usuario();
 
         public CadastroUsuario()
@@ -79,13 +80,21 @@ namespace livrariafds
 
         private void Sair(object sender, EventArgs e)
         {
+            // Mostra o formualario de login e fecha o de cadastro
             fr1.Show();
             this.Close();
         }
 
         private void CadastroUsuario_Load(object sender, EventArgs e)
         {
-            lblNome.Text = usr.getNome();
+            lblNome.Text = "Logado com: " + usr.getNome();
+        }
+
+        private void ListarUsuarios(object sender, EventArgs e)
+        {
+            lUsuarios = new ListarUsuarios();
+            lUsuarios.setCLivro(this);
+            lUsuarios.Show();
         }
     }
 }

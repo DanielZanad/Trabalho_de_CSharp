@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace livrariafds
 {
+
     public partial class ListarUsuarios : Form
     {
+        CadastroUsuario cLivro = null;
+
+        public void setCLivro(CadastroUsuario cLivro)
+        {
+            this.cLivro = cLivro;
+        }
+
         public ListarUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void Voltar(object sender, EventArgs e)
+        {
+            cLivro.Show();
+            this.Close();
         }
     }
 }

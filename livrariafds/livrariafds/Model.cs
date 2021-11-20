@@ -58,31 +58,40 @@ namespace livrariafds
             // Criando query
             string sql = $"SELECT * FROM usuario WHERE email = '{usr.getEmail()}' AND senha = md5('{usr.getSenha()}')";
             MySqlCommand comando = new MySqlCommand(sql, conexao);
-
-            // Abrindo conexao
-            conexao.Open();
-
-            // Executando o comando e o resultado sendo armazenando em um objeto do tipo MySqlDataReader
-            MySqlDataReader dr = comando.ExecuteReader();
-
-            // Verificando se ha registros no resultado
-            if (dr.Read())
+            try
             {
-                Usuario usrResultado = new Usuario();
-                usrResultado.setNome(Convert.ToString(dr[1]));
-                usrResultado.setEmail(Convert.ToString(dr[3]));
+                // Abrindo conexao
+                conexao.Open();
 
-                resultado["status"] = 200;
-                resultado["usuario"] = usrResultado;
-                resultado["msg"] = "Login feito com sucesso";
-                return resultado;
+                // Executando o comando e o resultado sendo armazenando em um objeto do tipo MySqlDataReader
+                MySqlDataReader dr = comando.ExecuteReader();
+
+                // Verificando se ha registros no resultado
+                if (dr.Read())
+                {
+                    Usuario usrResultado = new Usuario();
+                    usrResultado.setNome(Convert.ToString(dr[1]));
+                    usrResultado.setEmail(Convert.ToString(dr[3]));
+
+                    resultado["status"] = 200;
+                    resultado["usuario"] = usrResultado;
+                    resultado["msg"] = "Login feito com sucesso";
+                    return resultado;
+                }
+                else
+                {
+                    resultado["status"] = 400;
+                    resultado["msg"] = "Email ou senha incorreto";
+                    return resultado;
+                }
             }
-            else
+            catch(Exception ex)
             {
                 resultado["status"] = 400;
-                resultado["msg"] = "Email ou senha incorreto";
+                resultado["msg"] = Convert.ToString(ex);
                 return resultado;
             }
+            
         }
 
 
