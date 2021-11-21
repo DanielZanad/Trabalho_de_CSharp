@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace livrariafds
 {
@@ -19,6 +20,9 @@ namespace livrariafds
 
         // Criando usuario para que fique armazenado os dados do usuario
         Usuario usr = new Usuario();
+
+        // Instanciando o objeto model
+        ModelUsuario model = new ModelUsuario();
 
         public CadastroUsuario()
         {
@@ -39,9 +43,8 @@ namespace livrariafds
             if (txtSenha.Text.Equals(txtConfirmarSenha.Text))
             {
                 // Criando "hash table" que vai armazenar o resultado do model
-                IDictionary<string, string> resultado = new Dictionary<string, string>();
-                // Instanciando o objeto model
-                ModelUsuario model = new ModelUsuario();
+                IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+                
                 // Instanciando o objeto usuario
                 Usuario usr = new Usuario();
 
@@ -58,9 +61,10 @@ namespace livrariafds
                 resultado = model.Salvar(usr);
 
                 // Verificando se deu tudo certo
-                if(resultado["status"] == "200")
+                if(resultado["status"] == 200)
                 {
                     MessageBox.Show("Cadastrado com sucesso");
+                    Limpar();
                 }
                 else
                 {
@@ -88,6 +92,10 @@ namespace livrariafds
         private void CadastroUsuario_Load(object sender, EventArgs e)
         {
             lblNome.Text = "Logado com: " + usr.getNome();
+            txtId.ReadOnly = true;
+            btnAtualizar.Enabled = false;
+            btnBuscar.Enabled = false;
+
         }
 
         private void ListarUsuarios(object sender, EventArgs e)
@@ -105,6 +113,100 @@ namespace livrariafds
             cLivro.setUsuario(usr);
             cLivro.Show();
             this.Hide();
+        }
+
+        private void Editar(object sender, EventArgs e)
+        {
+            txtId.ReadOnly = false;
+            btnBuscar.Enabled = true;
+        }
+
+        private void BuscarUsuario(object sender, EventArgs e)
+        {
+            if(txtId.Text == "")
+            {
+                MessageBox.Show("Campo ID esta vazio");
+            }
+            else
+            {
+                IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+                resultado = model.ListarPorId(Convert.ToInt32(txtId.Text));
+                MySqlDataReader dr = resultado["resultado"];
+                if (dr.Read())
+                {
+                    if (resultado["status"] == 200)
+                    {
+                        
+                        string[] data2 = Convert.ToString(dr[2]).Split('/');
+                        string anoFormat = data2[2];
+                        int dia = Convert.ToInt32(data2[0]);
+                        int mes = Convert.ToInt32(data2[1]);
+                        int ano = Convert.ToInt32(anoFormat.Substring(0,4));
+
+                        txtNome.Text = Convert.ToString(dr[1]);
+                        dtpData.Value = new DateTime(ano, mes, dia);
+                        txtEmail.Text = Convert.ToString(dr[3]);
+                        txtSenha.Text = Convert.ToString(dr[4]);
+                        btnAtualizar.Enabled = true;
+                        model.FecharConexao();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado["msg"]);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show(resultado["msg"]);
+                }
+            }
+            
+            
+             
+            
+
+
+        }
+
+        public void Limpar()
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtSenha.Text = "";
+            txtConfirmarSenha.Text = "";
+        }
+
+        private void AtualizarUsuario(object sender, EventArgs e)
+        {
+            // Instanciando o objeto usuario
+            Usuario usr = new Usuario();
+
+            // Inserindo dados que vem do formulario e atribuindo ao objeto
+            string dia = Convert.ToString(dtpData.Value.Day);
+            string mes = Convert.ToString(dtpData.Value.Month);
+            string ano = Convert.ToString(dtpData.Value.Year);
+            usr.setId(Convert.ToInt32(txtId.Text));
+            usr.setNome(txtNome.Text);
+            usr.setEmail(txtEmail.Text);
+            usr.setDataNasc($"{ano}-{mes}-{dia}");
+            usr.setSenha(txtSenha.Text);
+
+
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+            resultado = model.Atualizar(usr);
+            if (resultado["status"] == 200)
+            {
+                MessageBox.Show(resultado["msg"]);
+                btnAtualizar.Enabled = false;
+                btnBuscar.Enabled = false;
+                Limpar();
+            }
+            else
+            {
+                MessageBox.Show(resultado["msg"]);
+            }
         }
     }
 }

@@ -61,6 +61,11 @@ namespace livrariafds
                 if (resultado["status"] == "200")
                 {
                     MessageBox.Show("Cadastrado com sucesso");
+                    txtNome.Text = "";
+                    txtAutor.Text = "";
+                    txtCodigo.Text = "";
+                    txtEditora.Text = "";
+                    txtGenero.Text = "";
                 }
                 else
                 {
