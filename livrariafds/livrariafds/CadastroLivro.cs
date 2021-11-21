@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace livrariafds
 {
@@ -17,6 +18,9 @@ namespace livrariafds
         ListarLivros lLivros = null;
 
         Usuario usr = null;
+
+        // Instanciando o model
+        ModelProdutos model = new ModelProdutos();
 
         public void setCdUsuario(CadastroUsuario cdUsuario)
         {
@@ -35,6 +39,8 @@ namespace livrariafds
         private void CadastroLivro_Load(object sender, EventArgs e)
         {
             lblNome.Text = "Logado com: " + usr.getNome();
+            btnAtualizar.Enabled = false;
+
         }
 
         private void Cadastrar(object sender, EventArgs e)
@@ -53,8 +59,6 @@ namespace livrariafds
                 prt.setGenero(Convert.ToString(txtGenero.Text));
                 prt.setEditora(Convert.ToString(txtEditora.Text));
                 prt.setAutor(Convert.ToString(txtAutor.Text));
-
-                ModelProdutos model = new ModelProdutos();
 
                 resultado = model.Salvar(prt);
 
@@ -87,6 +91,44 @@ namespace livrariafds
             lLivros.setCLivro(this);
             lLivros.Show();
             this.Hide();
+        }
+
+        private void BuscarProduto(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("Campo Codigo esta vazio");
+            }
+            else
+            {
+                int codigo = Convert.ToInt32(txtCodigo.Text);
+
+                IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+                resultado = model.ListarPorCodigo(codigo);
+                MySqlDataReader dr = resultado["resultado"]; 
+
+
+                if (dr.Read())
+                {
+                    if (resultado["status"] == 200)
+                    {
+                        txtNome.Text = Convert.ToString(dr[1]);
+                        txtGenero.Text = Convert.ToString(dr[2]);
+                        txtEditora.Text = Convert.ToString(dr[3]);
+                        txtAutor.Text = Convert.ToString(dr[4]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("msg");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("msg");
+                }
+                
+            }
+            
         }
     }
 }

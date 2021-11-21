@@ -81,6 +81,38 @@ namespace livrariafds
             }
 
         }
+        public IDictionary<string, dynamic> ListarPorCodigo(int codigo)
+        {
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+
+            // Criando query
+            string sql = $"SELECT * FROM produto WHERE codigo ='{codigo}'";
+            MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+            try
+            {
+                conexao.Open();
+                // Executando o comando e o resultado sendo armazenando em um objeto do tipo MySqlDataReader
+                MySqlDataReader dr = comando.ExecuteReader();
+                resultado["status"] = 200;
+                resultado["msg"] = "Produto encontrado e retornado";
+                resultado["resultado"] = dr;
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                resultado["status"] = 400;
+                resultado["msg"] = Convert.ToString(ex);
+                return resultado;
+            }
+            finally
+            {
+                comando.Dispose();
+            }
+
+        }
 
 
         public IDictionary<string, dynamic> Excluir(int codigo)

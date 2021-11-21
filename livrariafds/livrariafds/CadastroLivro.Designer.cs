@@ -43,6 +43,8 @@ namespace livrariafds
             this.btnListarProdutos = new System.Windows.Forms.Button();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnEditarBuscar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNome
@@ -141,7 +143,7 @@ namespace livrariafds
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(78, 323);
+            this.btnCadastrar.Location = new System.Drawing.Point(28, 351);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(165, 40);
             this.btnCadastrar.TabIndex = 26;
@@ -152,7 +154,7 @@ namespace livrariafds
             // btnListarProdutos
             // 
             this.btnListarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProdutos.Location = new System.Drawing.Point(320, 323);
+            this.btnListarProdutos.Location = new System.Drawing.Point(220, 351);
             this.btnListarProdutos.Name = "btnListarProdutos";
             this.btnListarProdutos.Size = new System.Drawing.Size(165, 40);
             this.btnListarProdutos.TabIndex = 27;
@@ -178,11 +180,34 @@ namespace livrariafds
             this.label5.TabIndex = 28;
             this.label5.Text = "Autor:";
             // 
+            // btnEditarBuscar
+            // 
+            this.btnEditarBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarBuscar.Location = new System.Drawing.Point(416, 351);
+            this.btnEditarBuscar.Name = "btnEditarBuscar";
+            this.btnEditarBuscar.Size = new System.Drawing.Size(165, 40);
+            this.btnEditarBuscar.TabIndex = 30;
+            this.btnEditarBuscar.Text = "Editar/Buscar";
+            this.btnEditarBuscar.UseVisualStyleBackColor = true;
+            this.btnEditarBuscar.Click += new System.EventHandler(this.BuscarProduto);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(596, 351);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(165, 40);
+            this.btnAtualizar.TabIndex = 31;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            // 
             // CadastroLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnEditarBuscar);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnListarProdutos);
@@ -222,5 +247,7 @@ namespace livrariafds
         private System.Windows.Forms.Button btnListarProdutos;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnEditarBuscar;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

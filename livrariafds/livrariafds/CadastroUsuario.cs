@@ -82,12 +82,7 @@ namespace livrariafds
 
         }
 
-        private void Sair(object sender, EventArgs e)
-        {
-            // Mostra o formualario de login e fecha o de cadastro
-            fr1.Show();
-            this.Close();
-        }
+
 
         private void CadastroUsuario_Load(object sender, EventArgs e)
         {
@@ -98,22 +93,6 @@ namespace livrariafds
 
         }
 
-        private void ListarUsuarios(object sender, EventArgs e)
-        {
-            lUsuarios = new ListarUsuarios();
-            lUsuarios.setCLivro(this);
-            lUsuarios.Show();
-            this.Hide();
-        }
-
-        private void CadastrarLivro(object sender, EventArgs e)
-        {
-            cLivro = new CadastroLivro();
-            cLivro.setCdUsuario(this);
-            cLivro.setUsuario(usr);
-            cLivro.Show();
-            this.Hide();
-        }
 
         private void Editar(object sender, EventArgs e)
         {
@@ -163,19 +142,7 @@ namespace livrariafds
                 }
             }
             
-            
-             
-            
 
-
-        }
-
-        public void Limpar()
-        {
-            txtNome.Text = "";
-            txtEmail.Text = "";
-            txtSenha.Text = "";
-            txtConfirmarSenha.Text = "";
         }
 
         private void AtualizarUsuario(object sender, EventArgs e)
@@ -202,11 +169,43 @@ namespace livrariafds
                 btnAtualizar.Enabled = false;
                 btnBuscar.Enabled = false;
                 Limpar();
+                txtId.Text = "";
             }
             else
             {
                 MessageBox.Show(resultado["msg"]);
             }
+        }
+
+        private void ListarUsuarios(object sender, EventArgs e)
+        {
+            lUsuarios = new ListarUsuarios();
+            lUsuarios.setCLivro(this);
+            lUsuarios.Show();
+            this.Hide();
+        }
+
+        private void CadastrarLivro(object sender, EventArgs e)
+        {
+            cLivro = new CadastroLivro();
+            cLivro.setCdUsuario(this);
+            cLivro.setUsuario(usr);
+            cLivro.Show();
+            this.Hide();
+        }
+
+        private void Sair(object sender, EventArgs e)
+        {
+            // Mostra o formualario de login e fecha o de cadastro
+            fr1.Show();
+            this.Close();
+        }
+        public void Limpar()
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtSenha.Text = "";
+            txtConfirmarSenha.Text = "";
         }
     }
 }
