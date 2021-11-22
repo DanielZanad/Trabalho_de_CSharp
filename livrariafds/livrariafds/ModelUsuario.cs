@@ -175,7 +175,6 @@ namespace livrariafds
             MySqlCommand comando = new MySqlCommand(sql, conexao);
             try
             {
-                // teste
                 conexao.Open();
 
                 // Executando o comando

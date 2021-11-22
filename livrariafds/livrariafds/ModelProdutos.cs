@@ -95,7 +95,6 @@ namespace livrariafds
                 // Executando o comando e o resultado sendo armazenando em um objeto do tipo MySqlDataReader
                 MySqlDataReader dr = comando.ExecuteReader();
                 resultado["status"] = 200;
-                resultado["msg"] = "Produto encontrado e retornado";
                 resultado["resultado"] = dr;
                 return resultado;
 
@@ -109,6 +108,44 @@ namespace livrariafds
             }
             finally
             {
+                comando.Dispose();
+            }
+
+        }
+
+        public IDictionary<string, dynamic> Atualizar(Produto prt)
+        {
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+            
+            string sql = $"UPDATE produto SET" +
+                $" codigo ='{prt.getCodigo()}', nome = '{prt.getNome()}', genero = '{prt.getGenero()}', editora = '{prt.getEditora()}', autor = '{prt.getAutor()}' " +
+                $"WHERE codigo = {prt.getCodigo()};";
+
+            // Passando o coamndo e a conexao como parametro
+            MySqlCommand comando = new MySqlCommand(sql, conexao);
+            try
+            {
+                conexao.Open();
+
+                // Executando o comando
+                comando.ExecuteNonQuery();
+
+                resultado["status"] = 200;
+                resultado["msg"] = "Produto atulizado com sucesso";
+                return resultado;
+
+
+            }
+            catch (Exception ex)
+            {
+                resultado["status"] = 400;
+                resultado["msg"] = ex.ToString();
+                return resultado;
+            }
+            finally
+            {
+                // Fechando conexao e limpando o objeto comando
+                conexao.Close();
                 comando.Dispose();
             }
 

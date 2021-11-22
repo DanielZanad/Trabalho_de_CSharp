@@ -65,11 +65,7 @@ namespace livrariafds
                 if (resultado["status"] == "200")
                 {
                     MessageBox.Show("Cadastrado com sucesso");
-                    txtNome.Text = "";
-                    txtAutor.Text = "";
-                    txtCodigo.Text = "";
-                    txtEditora.Text = "";
-                    txtGenero.Text = "";
+                    Limpar();
                 }
                 else
                 {
@@ -116,6 +112,8 @@ namespace livrariafds
                         txtGenero.Text = Convert.ToString(dr[2]);
                         txtEditora.Text = Convert.ToString(dr[3]);
                         txtAutor.Text = Convert.ToString(dr[4]);
+                        model.FecharConexao();
+                        btnAtualizar.Enabled = true;
                     }
                     else
                     {
@@ -129,6 +127,40 @@ namespace livrariafds
                 
             }
             
+        }
+
+        private void AtualizarProduto(object sender, EventArgs e)
+        {
+            Produto prt = new Produto();
+            prt.setCodigo(Convert.ToInt32(txtCodigo.Text));
+            prt.setNome(txtNome.Text);
+            prt.setGenero(txtGenero.Text);
+            prt.setEditora(txtEditora.Text);
+            prt.setAutor(txtAutor.Text);
+
+            IDictionary<string, dynamic> resultado = new Dictionary<string, dynamic>();
+            resultado = model.Atualizar(prt);
+
+            if(resultado["status"] == 200)
+            {
+
+                MessageBox.Show(resultado["msg"]);
+                btnAtualizar.Enabled = false;
+                Limpar();
+            }
+            else
+            {
+                MessageBox.Show(resultado["msg"]);
+            }
+        }
+
+        public void Limpar()
+        {
+            txtNome.Text = "";
+            txtAutor.Text = "";
+            txtCodigo.Text = "";
+            txtEditora.Text = "";
+            txtGenero.Text = "";
         }
     }
 }

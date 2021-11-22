@@ -200,6 +200,7 @@ namespace livrariafds
             this.btnAtualizar.TabIndex = 31;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.AtualizarProduto);
             // 
             // CadastroLivro
             // 
