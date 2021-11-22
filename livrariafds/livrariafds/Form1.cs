@@ -41,6 +41,8 @@ namespace livrariafds
                     cdUsuario = new CadastroUsuario();
                     cdUsuario.setFr1(this);
                     cdUsuario.setUsuario(resultado["usuario"]);
+                    txtLogin.Text = "";
+                    txtSenha.Text = "";
                     cdUsuario.Show();
                     this.Hide();
                 }
@@ -50,6 +52,8 @@ namespace livrariafds
                     tlivro.setFr1(this);
                     tlivro.setUsr(resultado["usuario"]);
                     tlivro.Show();
+                    txtLogin.Text = "";
+                    txtSenha.Text = "";
                     this.Hide();
                 }
                 
