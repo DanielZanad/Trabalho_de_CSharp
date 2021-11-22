@@ -133,12 +133,14 @@ namespace livrariafds
                     else
                     {
                         MessageBox.Show(resultado["msg"]);
+                        model.FecharConexao();
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show(resultado["msg"]);
+                    MessageBox.Show("Usuário não encontrado!");
+                    model.FecharConexao();
                 }
             }
             

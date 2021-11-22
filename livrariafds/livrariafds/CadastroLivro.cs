@@ -117,12 +117,14 @@ namespace livrariafds
                     }
                     else
                     {
-                        MessageBox.Show("msg");
+                        MessageBox.Show(resultado["msg"]);
+                        model.FecharConexao();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("msg");
+                    MessageBox.Show("Produto não encontrado!");
+                    model.FecharConexao();
                 }
                 
             }
