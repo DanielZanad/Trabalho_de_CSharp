@@ -60,7 +60,7 @@ namespace livrariafds
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(663, 41);
+            this.btnLogout.Location = new System.Drawing.Point(673, 36);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(104, 32);
             this.btnLogout.TabIndex = 0;
@@ -72,7 +72,7 @@ namespace livrariafds
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(606, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(562, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(105, 20);
             this.lblUsuario.TabIndex = 1;
@@ -80,9 +80,9 @@ namespace livrariafds
             // 
             // pctLivro1
             // 
-            this.pctLivro1.Location = new System.Drawing.Point(28, 109);
+            this.pctLivro1.Location = new System.Drawing.Point(28, 74);
             this.pctLivro1.Name = "pctLivro1";
-            this.pctLivro1.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro1.Size = new System.Drawing.Size(107, 146);
             this.pctLivro1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro1.TabIndex = 2;
             this.pctLivro1.TabStop = false;
@@ -91,7 +91,7 @@ namespace livrariafds
             // 
             this.lblLivro1.AutoSize = true;
             this.lblLivro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLivro1.Location = new System.Drawing.Point(25, 241);
+            this.lblLivro1.Location = new System.Drawing.Point(25, 223);
             this.lblLivro1.Name = "lblLivro1";
             this.lblLivro1.Size = new System.Drawing.Size(47, 17);
             this.lblLivro1.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace livrariafds
             // 
             this.lblLivro2.AutoSize = true;
             this.lblLivro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLivro2.Location = new System.Drawing.Point(243, 241);
+            this.lblLivro2.Location = new System.Drawing.Point(243, 223);
             this.lblLivro2.Name = "lblLivro2";
             this.lblLivro2.Size = new System.Drawing.Size(84, 17);
             this.lblLivro2.TabIndex = 5;
@@ -109,9 +109,9 @@ namespace livrariafds
             // 
             // pctLivro2
             // 
-            this.pctLivro2.Location = new System.Drawing.Point(246, 109);
+            this.pctLivro2.Location = new System.Drawing.Point(246, 74);
             this.pctLivro2.Name = "pctLivro2";
-            this.pctLivro2.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro2.Size = new System.Drawing.Size(107, 146);
             this.pctLivro2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro2.TabIndex = 4;
             this.pctLivro2.TabStop = false;
@@ -120,7 +120,7 @@ namespace livrariafds
             // 
             this.lblLivro3.AutoSize = true;
             this.lblLivro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLivro3.Location = new System.Drawing.Point(462, 241);
+            this.lblLivro3.Location = new System.Drawing.Point(462, 223);
             this.lblLivro3.Name = "lblLivro3";
             this.lblLivro3.Size = new System.Drawing.Size(80, 17);
             this.lblLivro3.TabIndex = 7;
@@ -128,9 +128,9 @@ namespace livrariafds
             // 
             // pctLivro3
             // 
-            this.pctLivro3.Location = new System.Drawing.Point(465, 109);
+            this.pctLivro3.Location = new System.Drawing.Point(465, 74);
             this.pctLivro3.Name = "pctLivro3";
-            this.pctLivro3.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro3.Size = new System.Drawing.Size(107, 146);
             this.pctLivro3.TabIndex = 6;
             this.pctLivro3.TabStop = false;
             // 
@@ -138,7 +138,7 @@ namespace livrariafds
             // 
             this.lblLivro4.AutoSize = true;
             this.lblLivro4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLivro4.Location = new System.Drawing.Point(667, 241);
+            this.lblLivro4.Location = new System.Drawing.Point(667, 223);
             this.lblLivro4.Name = "lblLivro4";
             this.lblLivro4.Size = new System.Drawing.Size(80, 17);
             this.lblLivro4.TabIndex = 9;
@@ -146,9 +146,9 @@ namespace livrariafds
             // 
             // pctLivro4
             // 
-            this.pctLivro4.Location = new System.Drawing.Point(670, 109);
+            this.pctLivro4.Location = new System.Drawing.Point(670, 74);
             this.pctLivro4.Name = "pctLivro4";
-            this.pctLivro4.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro4.Size = new System.Drawing.Size(107, 146);
             this.pctLivro4.TabIndex = 8;
             this.pctLivro4.TabStop = false;
             // 
@@ -164,9 +164,9 @@ namespace livrariafds
             // 
             // pctLivro8
             // 
-            this.pctLivro8.Location = new System.Drawing.Point(670, 277);
+            this.pctLivro8.Location = new System.Drawing.Point(670, 262);
             this.pctLivro8.Name = "pctLivro8";
-            this.pctLivro8.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro8.Size = new System.Drawing.Size(107, 144);
             this.pctLivro8.TabIndex = 20;
             this.pctLivro8.TabStop = false;
             // 
@@ -182,9 +182,9 @@ namespace livrariafds
             // 
             // pctLivro7
             // 
-            this.pctLivro7.Location = new System.Drawing.Point(465, 277);
+            this.pctLivro7.Location = new System.Drawing.Point(465, 262);
             this.pctLivro7.Name = "pctLivro7";
-            this.pctLivro7.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro7.Size = new System.Drawing.Size(107, 144);
             this.pctLivro7.TabIndex = 18;
             this.pctLivro7.TabStop = false;
             // 
@@ -200,9 +200,9 @@ namespace livrariafds
             // 
             // pctLivro6
             // 
-            this.pctLivro6.Location = new System.Drawing.Point(246, 277);
+            this.pctLivro6.Location = new System.Drawing.Point(246, 262);
             this.pctLivro6.Name = "pctLivro6";
-            this.pctLivro6.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro6.Size = new System.Drawing.Size(107, 144);
             this.pctLivro6.TabIndex = 16;
             this.pctLivro6.TabStop = false;
             // 
@@ -218,9 +218,9 @@ namespace livrariafds
             // 
             // pctLivro5
             // 
-            this.pctLivro5.Location = new System.Drawing.Point(28, 277);
+            this.pctLivro5.Location = new System.Drawing.Point(28, 262);
             this.pctLivro5.Name = "pctLivro5";
-            this.pctLivro5.Size = new System.Drawing.Size(97, 129);
+            this.pctLivro5.Size = new System.Drawing.Size(107, 144);
             this.pctLivro5.TabIndex = 14;
             this.pctLivro5.TabStop = false;
             // 
