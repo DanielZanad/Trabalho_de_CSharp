@@ -16,8 +16,8 @@ namespace livrariafds
         public IDictionary<string, string> Salvar(Produto prt)
         {
             IDictionary<string, string> resultado = new Dictionary<string, string>();
-            string sql = $"INSERT INTO produto(codigo,nome,genero,editora, autor)" +
-                $" VALUES('{prt.getCodigo()}', '{prt.getNome()}', '{prt.getGenero()}', '{prt.getEditora()}', '{prt.getAutor()}')";
+            string sql = $"INSERT INTO produto(codigo,nome,genero,editora, autor, dimagem)" +
+                $" VALUES('{prt.getCodigo()}', '{prt.getNome()}', '{prt.getGenero()}', '{prt.getEditora()}', '{prt.getAutor()}', '{prt.getDImagem()}')";
 
             // Passando o coamndo e a conexao como parametro
             MySqlCommand comando = new MySqlCommand(sql, conexao);

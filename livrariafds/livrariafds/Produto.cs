@@ -13,6 +13,7 @@ namespace livrariafds
         private string genero;
         private string editora;
         private string autor;
+        private string dImagem;
 
         public int getCodigo()
         {
@@ -57,6 +58,15 @@ namespace livrariafds
         public void setAutor(string autor)
         {
             this.autor = autor;
+        }
+
+        public string getDImagem()
+        {
+            return this.dImagem;
+        }
+        public void setDImagem(string dImagem)
+        {
+            this.dImagem = dImagem;
         }
     }
 }

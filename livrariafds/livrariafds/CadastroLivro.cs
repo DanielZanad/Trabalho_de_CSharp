@@ -59,6 +59,8 @@ namespace livrariafds
                 prt.setGenero(Convert.ToString(txtGenero.Text));
                 prt.setEditora(Convert.ToString(txtEditora.Text));
                 prt.setAutor(Convert.ToString(txtAutor.Text));
+                prt.setDImagem(Convert.ToString("imagens/" + txtCodigo.Text + ".png"));
+                System.IO.File.Copy(ofdFotos.FileName, "imagens/" + txtCodigo.Text + ".png");
 
                 resultado = model.Salvar(prt);
 
@@ -163,6 +165,16 @@ namespace livrariafds
             txtCodigo.Text = "";
             txtEditora.Text = "";
             txtGenero.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ofdFotos.ShowDialog();
+        }
+
+        private void CarregarFotos(object sender, CancelEventArgs e)
+        {
+            pctFotos.Image = Image.FromFile(ofdFotos.FileName);
         }
     }
 }
