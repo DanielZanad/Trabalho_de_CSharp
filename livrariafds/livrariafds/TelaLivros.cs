@@ -101,6 +101,7 @@ namespace livrariafds
 
 
                 }
+                model.FecharConexao();
             }
 
 
