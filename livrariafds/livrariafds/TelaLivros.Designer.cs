@@ -131,6 +131,7 @@ namespace livrariafds
             this.pctLivro3.Location = new System.Drawing.Point(465, 74);
             this.pctLivro3.Name = "pctLivro3";
             this.pctLivro3.Size = new System.Drawing.Size(107, 146);
+            this.pctLivro3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro3.TabIndex = 6;
             this.pctLivro3.TabStop = false;
             // 
@@ -149,6 +150,7 @@ namespace livrariafds
             this.pctLivro4.Location = new System.Drawing.Point(670, 74);
             this.pctLivro4.Name = "pctLivro4";
             this.pctLivro4.Size = new System.Drawing.Size(107, 146);
+            this.pctLivro4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro4.TabIndex = 8;
             this.pctLivro4.TabStop = false;
             // 
@@ -167,6 +169,7 @@ namespace livrariafds
             this.pctLivro8.Location = new System.Drawing.Point(670, 262);
             this.pctLivro8.Name = "pctLivro8";
             this.pctLivro8.Size = new System.Drawing.Size(107, 144);
+            this.pctLivro8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro8.TabIndex = 20;
             this.pctLivro8.TabStop = false;
             // 
@@ -185,6 +188,7 @@ namespace livrariafds
             this.pctLivro7.Location = new System.Drawing.Point(465, 262);
             this.pctLivro7.Name = "pctLivro7";
             this.pctLivro7.Size = new System.Drawing.Size(107, 144);
+            this.pctLivro7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro7.TabIndex = 18;
             this.pctLivro7.TabStop = false;
             // 
@@ -203,6 +207,7 @@ namespace livrariafds
             this.pctLivro6.Location = new System.Drawing.Point(246, 262);
             this.pctLivro6.Name = "pctLivro6";
             this.pctLivro6.Size = new System.Drawing.Size(107, 144);
+            this.pctLivro6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro6.TabIndex = 16;
             this.pctLivro6.TabStop = false;
             // 
@@ -221,6 +226,7 @@ namespace livrariafds
             this.pctLivro5.Location = new System.Drawing.Point(28, 262);
             this.pctLivro5.Name = "pctLivro5";
             this.pctLivro5.Size = new System.Drawing.Size(107, 144);
+            this.pctLivro5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLivro5.TabIndex = 14;
             this.pctLivro5.TabStop = false;
             // 
